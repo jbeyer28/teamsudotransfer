@@ -1,0 +1,193 @@
+<html>
+<title>Checkout - Sudo Store</title>
+
+<body>
+<table width="100%" cellpadding="10px" cellspacing="0px">
+	<tr bgcolor="#80ccff">
+		<td width="400px"><a href="index.html"><font size="30px" color="black" text-decoration="none">Sudo Store</font></a></td>
+		<td></td>
+		<td width="200px"><form action="search.html" method="get">
+				<input type="text" placeholder="Search" name="q" size="30" required>
+			</form>
+		</td>
+	<tr>
+		<td colspan="3">
+			<table width="100%" cellpadding="10px" cellspacing="0px">
+				<tr height="40px"></tr>
+				<tr>
+					<td></td>
+					<td width="800px">
+						<a href="cart.html"><font color="black">&#129044; Back to cart</font></a><br><br>
+						<table width="100%" cellpadding="10px" cellspacing="0px" border="1px solid black">
+							<tr>
+								<td width="400px" colspan=2>
+									Product
+								</td>
+								<td width="100px">
+									Price each
+								</td>
+								<td width="100px">
+									Quantity
+								</td>
+								<td width="100px">
+									Total Price
+								</td>
+							</tr>
+							<tr>
+								<td width="100px">
+									<img src="/img/keyboard.jpg" width="100px">
+								</td>
+								<td width="300px">
+									Sudo Keyboard
+								</td>
+								<td>
+									$45
+								</td>
+								<td>
+									2
+								</td>
+								<td>
+									$90
+								</td>
+							</tr>
+							<tr>
+								<td width="100px">
+									<img src="/img/speakers.png" width="100px">
+								</td>
+								<td width="200px">
+									Sudo Speakers
+								</td>
+								<td>
+									$60
+								</td>
+								<td>
+									1
+								</td>
+								<td>
+									$60
+								</td>
+							</tr>
+							<tr>
+								<td width="300px" colspan=3>
+									Total:
+								</td>
+								<td>
+									3
+								</td>
+								<td>
+									$150
+								</td>
+							</tr>
+						</table>
+						
+						<br><br>
+						
+						<fieldset>
+							<legend>Payment</legend>
+							<form action="complete.html" method="post">
+							<input type="text" name="ccn" size="30" pattern="[0-9]{15,16}" placeholder="Card Number" required><br><br>
+							<input type="number" name="ccm" min=1 max=12 step=1 placeholder="MM" size="4" required> / <input type="number" name="ccy" min=0 max=99 step=1 placeholder="YY" size="4" required>
+							<input type="text" name="cvv" pattern="[0-9]{3,4}" placeholder="CVV" size="6" required><br>
+						</fieldset>
+						<br>
+						<fieldset>
+							<legend>Shipping</legend>
+							<input type="text" name="fname" size="25" placeholder="Fist Name" required><input type="text" name="lname" size="25" placeholder="Last Name" required><br><br>
+							<input type="text" name="addr" size="50" placeholder="Address" required><br><br>
+							<input type="text" name="city" size="30" placeholder="City" required>
+								<select name="state">
+									<option value="XX">State</option>
+									<option value="AL">Alabama</option>
+									<option value="AK">Alaska</option>
+									<option value="AS">American Samoa</option>
+									<option value="AZ">Arizona</option>
+									<option value="AR">Arkansas</option>
+									<option value="CA">California</option>
+									<option value="CO">Colorado</option>
+									<option value="CT">Connecticut</option>
+									<option value="DC">District of Columbia</option>
+									<option value="DE">Delaware</option>
+									<option value="FL">Florida</option>
+									<option value="GA">Georgia</option>
+									<option value="GU">Guam</option>
+									<option value="HI">Hawaii</option>
+									<option value="ID">Idaho</option>
+									<option value="IL">Illinois</option>
+									<option value="IN">Indiana</option>
+									<option value="IA">Iowa</option>
+									<option value="KS">Kansas</option>
+									<option value="KY">Kentucky</option>
+									<option value="LA">Louisiana</option>
+									<option value="ME">Maine</option>
+									<option value="MD">Maryland</option>
+									<option value="MA">Massachusetts</option>
+									<option value="MI">Michigan</option>
+									<option value="MN">Minnesota</option>
+									<option value="MS">Mississippi</option>
+									<option value="MO">Missouri</option>
+									<option value="MP">Northern Mariana Islands</option>
+									<option value="MT">Montana</option>
+									<option value="NE">Nebraska</option>
+									<option value="NV">Nevada</option>
+									<option value="NH">New Hampshire</option>
+									<option value="NJ">New Jersey</option>
+									<option value="NM">New Mexico</option>
+									<option value="NY">New York</option>
+									<option value="NC">North Carolina</option>
+									<option value="ND">North Dakota</option>
+									<option value="OH">Ohio</option>
+									<option value="OK">Oklahoma</option>
+									<option value="OR">Oregon</option>
+									<option value="PA">Pennsylvania</option>
+									<option value="PR">Puerto Rico</option>
+									<option value="RI">Rhode Island</option>
+									<option value="SC">South Carolina</option>
+									<option value="SD">South Dakota</option>
+									<option value="TN">Tennessee</option>
+									<option value="TX">Texas</option>
+									<option value="UT">Utah</option>
+									<option value="VT">Vermont</option>
+									<option value="VA">Virginia</option>
+									<option value="VI">U.S. Virgin Islands</option>
+									<option value="WA">Washington</option>
+									<option value="WV">West Virginia</option>
+									<option value="WI">Wisconsin</option>
+									<option value="WY">Wyoming</option>
+									<option value="OT">Other teritory</option>
+								</select>
+								<input type="text" name="zip" pattern="[0-9]{5}" size="8" placeholder="Zip code" required><br><br>
+								<input type="submit" value="Purchase">
+							</form>
+						</fieldset>
+						<br>
+						
+					</td>
+					<td></td>
+				</tr>
+				<tr height="40px"></tr>
+			</table>
+		</td>
+	</tr>
+
+	<tr>
+		<td colspan="3" bgcolor="#b3e0ff">
+			<center>
+				For the super user in you<br><br> 
+				<a href="/faq.html">FAQ</a>
+				<a href="/about.html">About</a>
+				<a href="/account.html">Account</a>
+
+			</center>
+		</td>
+	</tr>
+</table>
+		
+
+
+
+
+
+
+
+
+
