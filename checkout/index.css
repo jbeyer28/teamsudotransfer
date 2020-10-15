@@ -1,0 +1,94 @@
+body{
+	background-color:#002e4d;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.header, .footer{
+	background-color:#004d80;
+	
+}
+
+a{
+	text-decoration:none;
+	color:#4dff4d;
+}
+
+/* Checkout tables */
+.cartTable table{
+	border-collapse: collapse;
+	color:#ccc;
+}
+.cartTable tr:nth-child(2n-1){
+	background-color:#005c99;
+}
+
+.cartTableHead td{
+	background-color:#246;
+}
+.cartTableBody{
+	border-bottom: 1px solid black;
+	background-color:#ddd;
+}
+
+/* Input styles */
+button{
+	background-color:#00000000;
+	border:none;
+	width:50px;
+}
+input[type="submit"]{
+	background-color:#005c99;
+	border: 1px solid #ccc;
+	border-radius:5px;
+	height:40px;
+	color:#ccc;
+	font-size:15px;
+}
+input[type=text]{
+	background-color:#005c99;
+	color:#ccc;
+	border: 1px solid #ccc;
+	border-radius:5px;
+	height:40px;
+	font-size:15px;
+	padding:5px;
+}
+input[type=number]{
+	background-color:#005c99;
+	color:#ccc;
+	border: 1px solid #ccc;
+	border-radius:5px;
+	width:60px;
+	height:40px;
+	font-size:15px;
+	padding:5px;
+}
+select{
+	background-color:#005c99;
+	height:40px;
+	border-radius:5px;
+	border: 1px solid #ccc;
+	color:#ccc;
+}
+
+/* Specific styles */
+fieldset{
+	color:#ccc;
+	border: 2px groove #4dff4d;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+legend {
+	font-size:20px;
+}
+
+#searchbar{
+	background-color:#00000000;
+	border-radius:30px;
+	border: 1px solid #ccc;
+	padding:10px;
+	color:#ccc;
+}
+
+#searchbar::placeholder{
+	color:#ccc;
+}
