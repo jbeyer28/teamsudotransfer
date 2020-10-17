@@ -5,29 +5,76 @@
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+	<link rel="stylesheet" href="productPage.css">
 	
 <header>
-    <table width="100%" cellpadding="10px" cellspacing="0px">
-        <tr bgcolor="#80ccff">
-            <td width="400px">
-                <a href="../index.html">
-                    <font size="30px">Sudo Store</font><br>
-                    <font size=2>"For The Superuser In You!"</font>
-                </a>
-            </td>
-            <td></td>
-            <td width="200px">
+    <table width=100%; >
+        <tr >
+            <td >
+				<div class="Title">
+					<h1><a href="../index.html">Sudo Store</a></h1>
+                    <h7 >"For The Superuser In You!"</h7>
+				</a>
+				</div>
+				<div class="SearchArea">
                 <form>
-                    <input type="text" placeholder="Search" size="30" required>
-				</form><br>
-				<a href="../account.html"><font size=3>Login</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="../register.html"><font size=3>Register</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="../reset.html"><font size=3>Forgot Password?</font>
+                    <input type="text" placeholder="Search" id="searchbar"  required>
+				</form>		
+				<a href="../account.html" class="UsrButton">Login</a>
+				<a href="../register.html" class="UsrButton">Register</a>
+				<a href="../reset.html" class="UsrButton">Forgot Password?</a>
+				</div>
             </td>
-        </tr>
+		</tr>
+		<div >
+		<tr>
+			<td >
+				<div>
+					<ul>
+						<li><a href ="../index.html" >All Products</a></li>
+						<li>
+						<div class="dropdown">
+							<a href="">Components</a>
+							<div class="dropdown-content">
+								<a href="../products/motherboard.html">SUDO Motherboard</a>
+								<a href="../products/case.html">SUDO Case</a>
+								<a href="../products/ram.html">SUDO RAM</a>
+								<a href="../products/cpuFan.html">SUDO CPU Fan</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="dropdown">
+							<a href="">Peripherals</a>
+							<div class="dropdown-content">
+								<a href="../products/keyboard.html">SUDO Keyboard</a>
+								<a href="../products/monitor.html">SUDO Monitor</a>
+								<a href="../products/mouse.html">SUDO Mouse</a>
+								<a href="../products/speakers.html">SUDO Speakers</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="dropdown">
+							<a href="">Accessories</a>
+							<div class="dropdown-content">
+								<a href="../products/RGBChair.html">SUDO Gaming Chair</a>
+								<a href="../products/lightstrip.html">SUDO Lighting Strip</a>
+								<a href="../products/mousepad.html">SUDO Mousepad</a>
+							</div>
+						</div>
+					</li>
+						<li><a href="../products/laptop.html">Laptops</a></li>
+					</ul>
+				</div>
+			</td>
+			
+		</tr>
+	</div>
 	</table>
 	<br>
-    <marquee>
+</header>
+<marquee>
 	<table>
    		<tr>
      	<td>
@@ -48,10 +95,10 @@
     </tr>
 	</table>
 	</marquee>
-</header>
 </head>
 
 <body>
+	<div class="bg"></div>
 	<center>
 	<table>
 	<tr>
@@ -62,15 +109,17 @@
 			<table width="100%" cellpadding="10px" cellspacing="0px">
 				<tr>
 					<td >
-						<img width=500px height=450px src="../img/Lightstrip.png">
+						<img width=500px height=450px src="../img/LightstripNoBG.png">
 					</td>
-					<td >
-						<font size=7><b>Sudo LED Strip</b></font><br>
+					<td>
+						<div class="productDescription">
+						<font size=7 id="productName"><b>Sudo LED Strip</b></font><br>
 						<p>Light up your life and gaming space with this programmable, 30' LED strip!<br></p><br><br>
 						
-						$80<font size=-2> +tax</font><br><br>
+						<p style=" font-size: 20px">$80 <sup>tax not included</sup> </p><br><br>
 						
-						<a href="../checkout/cart.html">Add to cart</a>
+						<button id=CartButton><a href="../checkout/cart.html">Add to cart</a></button>
+					</div>
 					</td>
 				</tr>
 			</table>
@@ -83,16 +132,15 @@
 </center>
 </body>
 <br>
-
 	<footer>
 	<table  width="100%" cellspacing="0px">
 	<tr>
-		<td colspan="3" bgcolor="#b3e0ff">
+		<td colspan="3" >
 			<center>
 				<a href="../faq.html">FAQ</a>&nbsp;&nbsp;
 				<a href="../about.html">About</a>&nbsp;&nbsp;
 				<a href="../account.html">Account</a><br><br>
-                <font size=3 color="grey">Last updated a while ago</font>
+				<font size=3>Last updated a while ago</font>
 			</center>
 		</td>
 	</tr>
