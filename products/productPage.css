@@ -1,0 +1,189 @@
+body, html{
+    background-image: url("../img/SudoBackground.png");
+    height:100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Title{
+    padding-top: 15px;
+    width: 400px;
+    height: 0px;
+    font-size: 30px;
+    margin: 0px;
+    padding-left: 5%;
+}
+.Title h1{
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+    text-shadow: 2px 2px 5px #036100;
+}
+
+.Title h7{
+    color: #397eff;
+    text-shadow: 2px 2px 5px #ff0099;
+}
+
+div.scrollmenu{
+    font-family: Arial, Helvetica, sans-serif;
+}
+font{
+    font-family: Arial, Helvetica, sans-serif;
+    color:#4dff4d;
+}
+#description{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+li{
+    float: left;
+}
+
+#searchbar{
+	background-color:#00000000;
+	border-radius:30px;
+	border: 1px solid #ccc;
+	padding:10px;
+	color:#ccc;
+}
+
+#searchbar::placeholder{
+	color:#ccc;
+}
+
+.SearchArea{
+    position: relative;
+    padding-left: 85%;
+}
+
+.SearchArea a{
+    display: block;
+    padding: 14px, 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.SearchArea a:hover{
+    background-image:radial-gradient(circle, #c7ba00 90%,rgba(189, 14, 212, 0.884) 10%);
+    box-shadow: 0px 0px 15px 15px rgba(189, 14, 212, 0.884);
+    transition: box-shadow .25s ease-out;
+    transition background-image: .25s ease-out;
+}
+.UsrButton {
+    background-color:#39b439;
+    border-radius: 30px;
+    width: 175px;
+    color: white;
+    padding: 6px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 0px;
+    cursor: pointer;
+  }
+.UsrButton:hover{
+    box-shadow: 0px 0px 5px 5px rgba(189, 14, 212, 0.884);
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+}
+
+li a{
+    display: block;
+    color: #4dff4d;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li p{
+    display: block;
+    color: #4dff4d;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-image:radial-gradient(circle, #3eb2ff 85%,rgba(14, 212, 57, 0.884) 10%);
+    box-shadow: 0px 0px 15px 15px rgba(14, 212, 196, 0.884);
+    z-index: 1;
+    transition: background-image .25s ease-out;
+    transition: box-shadow .25s ease-out;
+}
+
+a{
+	text-decoration:none;
+	color:#4dff4d;
+}
+
+.dropdown{
+    float: left;
+    overflow: visible;
+}
+
+
+.dropdown a:hover{
+    border-radius:30px;
+    background-image:radial-gradient(circle, #3eb2ff 90%,rgba(14, 212, 57, 0.884) 10%);
+    box-shadow: 0px 0px 15px 15px rgba(14, 212, 196, 0.884);
+}
+
+.dropdown-content {
+    display:none;
+    position: absolute;
+    
+    min-width: 160px;
+    z-index: 1;
+  }
+  .dropdown-content a {
+    border-radius:30px;
+    float: none;
+    color: #4dff4d;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+#CartButton{
+    text-align: center;
+    background-color: rgb(187, 0, 0);
+    border-radius: 30px;
+    border: none;
+    margin: 10px;
+    padding: 16px;
+
+}
+
+#CartButton:hover{
+    box-shadow: 0px 0px 15px 15px goldenrod;
+    transition: box-shadow .5s ease-out
+}
+
+.productDescription p{
+    color: rgb(255, 255, 255);
+    size: 15px;
+    text-shadow: 2px 2px 5px rgb(255, 0, 242);
+}
+
+.productDescription font{
+    size: 15px;
+    text-shadow: 2px 2px 5px rgb(78, 74, 66);
+}
+
+
+footer{
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
