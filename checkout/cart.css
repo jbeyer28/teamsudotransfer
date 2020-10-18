@@ -1,0 +1,120 @@
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+/*
+header, footer{
+	background-color:#004d80;
+	
+}
+
+header a, footer a{
+	text-decoration:none;
+	color:#4dff4d;
+}
+
+header a:hover, footer a:hover{
+	text-decoration:none;
+	color:#99ff99;
+}
+
+a{
+	text-decoration:none;
+	color:#33d6ff;
+}*/
+
+a:hover{
+	text-decoration:none;
+	color:#80e5ff;
+}
+
+
+/* Checkout tables */
+.cartTable table{
+	border-collapse: collapse;
+	color:#ccc;
+}
+.cartTable tr:nth-child(2n-1){
+	background-color:#005c99cc;
+}
+
+.cartTableHead td{
+	background-color:#246;
+}
+.cartTableBody{
+	border-bottom: 1px solid black;
+	background-color:#ddd;
+}
+
+/* Input styles */
+button{
+	background-color:#00000000;
+	border:none;
+	width:50px;
+}
+
+input, select{
+	color:#fff;
+	padding:5px;
+	border-radius:5px;
+	border: 1px solid #ccc;
+	font-size:15px;
+	background-color:#00000000;
+	margin:1px;
+	
+}
+input::placeholder{
+	color:#ccc;
+}
+
+input:valid{/*Displays differently if data is valid or invalid*/
+	color:#aaa;
+	border: 1px solid #ccc;
+}
+input:invalid{
+	color:#f99;
+}
+
+
+input[type="submit"], input[type=text]{
+	height:40px;
+}
+
+input[type=number]{
+	width:60px;
+	height:40px;
+}
+
+select{
+	height:50px;
+}
+
+/* Inputs when they are hovered over and focused on*/
+input:hover, input:focus, select:hover, select:focus{
+	background-color:#80808088;
+	color:#fff;
+}
+
+/* Specific styles */
+fieldset{
+	color:#ccc;
+	background-color:#55555588;
+	border: 2px solid #005c99;
+	border-radius:5px;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+legend {
+	font-size:20px;
+}
+
+#searchbar{
+	background-color:#00000000;
+	border-radius:30px;
+	border: 1px solid #ccc;
+	padding:10px;
+	color:#ccc;
+}
+
+#searchbar::placeholder{
+	color:#ccc;
+}
