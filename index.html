@@ -202,7 +202,8 @@ footer{
 		}
 	</style>
     <table width=100%; >
-        <tr >
+        <tr>
+			
             <td >
 				<div class="Title">
 					<h1><a href="index.html">Sudo Store</a></h1>
@@ -262,7 +263,7 @@ footer{
 					</ul>
 				</div>
 			</td>
-			
+			</tr>
 		</tr>
 	</div>
 	</table>
@@ -291,153 +292,270 @@ footer{
 </header>
 </head>
 
+<style>
+	.content-table{
+		border-collapse: collapse;
+		margin: 25px 0;
+		font-size: 0.9em;
+		min-width: 400px;
+		border-radius: 5px 5px 0 0;
+		overflow: hidden;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	}
+	
+	.content-table thead tr{
+		background-color: black;
+		color: #ffffff;
+		text-align: left;
+		font-weight: bold;
+	}
+
+	.content-table th,
+	.contect-table td{
+		padding: 10px;
+		border: 1px solid black;
+		position: sticky;
+		top: 0;
+	}
+
+	.content-table tbody tr{
+		border-bottom: 1px solid #dddddd;
+	}
+	.content-table tbody tr:nth-of-type(even){
+		background-color: #f3f3f3;
+	}
+
+	.content-table tbody tr:last-of-type{
+		border-bottom: 2px solid #009900;
+	}
+	.content-table tbody tr:active-row {
+		font-weight: bold;
+		color: #009879;
+	}
+
+	.content-table th::after{
+		content: ' ';
+		width:100px;
+		height:2px;
+		position: absolute;
+		bottom:0;
+		left:0;
+		background:black;
+	}
+</style>
 <body>
-	<center>
-<table width="90%" cellspacing=50px >
+<table class= "content-table" width="90%" cellspacing=50px >
+	<thead>
 	<tr>
-		<td>
-			<img width=200px height=760px src="img/LaptopNoBG.png">
+		<th><a href="index.html">Product ↕</a></th>
+			<th><a href="index.html">Name ↕</a></th>
+			<th><a href="index.html">Price(before tax) ↕</a></th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td width="25%"><a href="products/mouse.html">
+			<img src="img/mouseNoBG.png" width="100%"><br>
+		</a>
 		</td>
-		<td colspan="3">
-			<table width="100%" cellspacing="0px" border="1px solid black">
-				<tr>
-					<td width="25%">
-						<a href="products/mouse.html">
-							<img src="img/mouseNoBG.png" width="100%"><br>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/keyboard.html">
-							<img src="img/keyboardNoBG.png" width="100%"><br>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/case.html">
-							<img src="img/caseNoBG.png" width="100%"><br>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/speakers.html">
-							<img src="img/speakers.png" width="100%"><br>
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td width="25%">
-						<a href="products/mouse.html">
-							<center><font size="+2" color="black">Mouse</font></center>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/keyboard.html">
-							<center><font size="+2" color="black">Keyboard</font></center>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/case.html">
-							<center><font size="+2" color="black">Case</font></center>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/speakers.html">
-							<center><font size="+2" color="black">Speakers</font></center>
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td width="25%">
-						<a href="products/Ram.html">
-							<img src="img/RamNoBG.png" width="100%"><br>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/Motherboard.html">
-							<img src="img/MotherboardNoBG.png" width="100%"><br>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/cpuFan.html">
-							<img src="img/CpuFanNoBG.png" width="100%"><br>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/RGBChair.html">
-							<img src="img/RGBChairNoBG.png" width="100%"><br>
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td width="25%">
-						<a href="products/Ram.html">
-							<center><font size="+2" color="black">Ram</font></center>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/Motherboard.html">
-							<center><font size="+2" color="black">Motherboard</font></center>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/CpuFan.html">
-							<center><font size="+2" color="black">Cpu Fan</font></center>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/RGBChair.html">
-							<center><font size="+2" color="black">Gaming Chair</font></center>
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td width="25%">
-						<a href="products/Monitor.html">
-							<img src="img/MonitorNoBG.png" width="100%"><br>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/Mousepad.html">
-							<img src="img/MousepadNoBG.png" width="100%"><br>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/lightstrip.html">
-							<img src="img/LightstripNoBG.png" width="100%"><br>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/laptop.html">
-							<img src="img/LaptopNoBG.png" width="100%"><br>
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td width="25%">
-						<a href="products/Monitor.html">
-							<center><font size="+2" color="black">Monitor</font></center>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/Mousepad.html">
-							<center><font size="+2" color="black">Mousepad</font></center>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/lightstrip.html">
-							<center><font size="+2" color="black">LED Light Strip</font></center>
-						</a>
-					</td>
-					<td width="25%">
-						<a href="products/laptop.html">
-							<center><font size="+2" color="black">Laptop</font></center>
-						</a>
-					</td>
-				</tr>
-			</table>
+		<td width="25%">
+			<a href="products/mouse.html">
+			<center><font size="+2" color="black">Sudo Mouse</center></font>
+			</a>
 		</td>
 		<td>
-			<img width=200px height=760px src="img/LaptopNoBG.png">
+			<a href="products/mouse.html">
+			<center><font size="+2" color="black">$80.00</center></font>
+			</a>
 		</td>
 	</tr>
+	<tr>
+					<td width="25%">
+					<a href="products/keyboard.html">
+					<img src="img/keyboardNoBG.png" width="100%">
+					</a>
+					</td>
+					<td width="25%">
+					<a href="products/keyboard.html"><center><font size="+2" color="black">Sudo Keyboard</center></font>
+					</a>
+					</td>
+					<td width="25%">
+					<a href="products/keyboard.html"><center><font size="+2" color="black">$150.00</center></font>
+					</a>
+					</td>
+	</tr>
+	<tr>
+		<td width="25%">
+			<a href="products/case.html">
+				<img src="img/caseNoBG.png" width="100%"><br>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/case.html"><center><font size="+2" color="black">
+			Sudo Case</center></font></a>
+		</td>
+		<td>
+			<a href="products/case.html"><center><font size="+2" color="black">
+				$45.00</center></font></a>
+		</td>
+	</tr>
+	<tr>
+		<td width="25%">
+			<a href="products/speakers.html">
+				<img src="img/speakers.png" width="100%"><br>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/speakers.html">
+				<center><font size="+2" color="black">Sudo Speakers</font></center>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/speakers.html">
+				<center><font size="+2" color="black">$45.00</font></center>
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td width="25%">
+			<a href="products/Ram.html">
+				<img src="img/RamNoBG.png" width="100%"><br>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/Ram.html">
+				<center><font size="+2" color="black">Sudo Ram</font></center>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/Ram.html">
+				<center><font size="+2" color="black">$250.00</font></center>
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td width="25%">
+			<a href="products/cpuFan.html">
+				<img src="img/CpuFanNoBG.png" width="100%"><br>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/CpuFan.html">
+				<center><font size="+2" color="black">Sudo Cpu Fan</font></center>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/CpuFan.html">
+				<center><font size="+2" color="black">$400.00</font></center>
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td width="25%">
+			<a href="products/RGBChair.html">
+				<img src="img/RGBChairNoBG.png" width="100%"><br>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/RGBChair.html">
+				<center><font size="+2" color="black">Sudo Racing Chair</font></center>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/RGBChair.html">
+				<center><font size="+2" color="black">$400.00</font></center>
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td width="25%">
+			<a href="products/Motherboard.html">
+				<img src="img/MotherboardNoBG.png" width="100%"><br>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/Motherboard.html">
+				<center><font size="+2" color="black">Sudo Motherboard</font></center>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/Motherboard.html">
+				<center><font size="+2" color="black">$400.00</font></center>
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td width="25%">
+			<a href="products/Monitor.html">
+				<img src="img/MonitorNoBG.png" width="100%"><br>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/Monitor.html">
+				<center><font size="+2" color="black">Sudo Monitor</font></center>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/Monitor.html">
+				<center><font size="+2" color="black">$500.00</font></center>
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td width="25%">
+			<a href="products/Mousepad.html">
+				<img src="img/MousepadNoBG.png" width="100%"><br>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/Mousepad.html">
+				<center><font size="+2" color="black">Sudo Mousepad</font></center>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/Mousepad.html">
+				<center><font size="+2" color="black">$80.00</font></center>
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td width="25%">
+			<a href="products/lightstrip.html">
+				<img src="img/LightstripNoBG.png" width="100%"><br>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/lightstrip.html">
+				<center><font size="+2" color="black">Sudo LED Light Strip</font></center>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/lightstrip.html">
+				<center><font size="+2" color="black">$80.00</font></center>
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td width="25%">
+			<a href="products/laptop.html">
+				<img src="img/LaptopNoBG.png" width="100%"><br>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/laptop.html">
+				<center><font size="+2" color="black">Sudo Laptop</font></center>
+			</a>
+		</td>
+		<td width="25%">
+			<a href="products/laptop.html">
+				<center><font size="+2" color="black">$3,000</font></center>
+			</a>
+		</td>
+	</tr>
+</tbody>
+							
+</table>
+		</td>
 	</table>
 	</center>
 	</body>
@@ -448,8 +566,8 @@ footer{
 	<tr>
 		<td colspan="3">
 			<center>
-				<a href="faq.html">FAQ</a>&nbsp;&nbsp;
-				<a href="about.html">About</a>&nbsp;&nbsp;
+				<a href="file:///var/www/html/teamsudo/about/faq.html">FAQ</a>&nbsp;&nbsp;
+				<a href="file:///var/www/html/teamsudo/about/about.html">About</a>&nbsp;&nbsp;
 				<a href="account.html">Account</a><br><br>
 				<font size=3 color="grey">Last updated a while ago</font>
 			</center>
