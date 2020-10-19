@@ -16,7 +16,7 @@ a{
 .cartTable table{
 	border-collapse: collapse;
 	color:#ccc;
-}
+} 
 .cartTable tr:nth-child(2n-1){
 	background-color:#005c99;
 }
