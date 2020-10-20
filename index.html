@@ -15,19 +15,7 @@
 }
 
 
-.parallax {
-  /* The image used */
-  background-image: url("img/SudoBackground.png");
-  font-family: Arial, Helvetica, sans-serif;
 
-  /* Full height */
-  height: 100%;
-
-  /* Create the parallax scrolling effect */
-  background-attachment:fixed;
-  background-position: center;
-
-}
 
 .Title{
     padding-top: 15px;
@@ -212,7 +200,8 @@ footer{
     padding-bottom: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
-		.Title:hover{
+		div.Title{
+			width:100%;
 			overflow: visible;
 		}
 
@@ -228,7 +217,6 @@ div.follow{
 	</style>
     <table width=100%; >
         <tr>
-			
             <td >
 				<div class="Title">
 					<h1><a href="index.html">Sudo Store</a></h1>
@@ -319,7 +307,7 @@ div.follow{
 
 <style>
 	.content-table{
-		border-collapse: collapse;
+		border-collapse:collapse;
 		margin: 10px;
 		height: 15px;
 		font-size: 0.9em;
@@ -333,7 +321,7 @@ div.follow{
 	.content-table thead tr{
 		background-color: black;
 		color: rgb(118, 255, 118);
-		text-align: left;
+		text-align: right;
 		font-weight: bold;
 	}
 	.content-table tbody tr:nth-of-type(even){
@@ -361,10 +349,20 @@ div.follow{
 		tbody.Selector tr:hover{
 			background-blend-mode: screen;
 		}
+		.content-table{
+			position: relative;
+    	top: 210px;
+    	height: 100px;
+    	width: 300px;
+    	margin: 100px;
+    	padding: 100px;
+		}
 </style>
 <body>
+	
 	<div style="height:1000px;font-size:36px">
-<table class= "content-table" width="40%" cellspacing=50px ><center> 
+		
+<table class= "content-table" width="40%"><center> 
 	<thead>
 	<tr>
 		<th><center>Product</center></th>
