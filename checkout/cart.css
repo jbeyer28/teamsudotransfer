@@ -63,7 +63,7 @@ input, select{
 	
 }
 input::placeholder{
-	color:#ccc;
+	color:#ddd;
 }
 
 input:valid{/*Displays differently if data is valid or invalid*/
@@ -75,7 +75,7 @@ input:invalid{
 }
 
 
-input[type="submit"], input[type=text]{
+input[type="submit"], input[type=text], input[type=password], input[type=email]{
 	height:40px;
 }
 
