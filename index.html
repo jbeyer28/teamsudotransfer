@@ -5,13 +5,31 @@
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-	
+
 <header>
 	<style>
 		body, html{
     background-image: url("img/SudoBackground.png");
     height:100%;
     font-family: Arial, Helvetica, sans-serif;
+}
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("img/SudoBackground.png");
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .Title{
@@ -194,7 +212,7 @@ a{
 
 
 footer{
-    
+    padding-bottom: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 		.Title:hover{
@@ -295,22 +313,22 @@ footer{
 <style>
 	.content-table{
 		border-collapse: collapse;
-		margin: 25px 0;
+		margin: 0;
 		font-size: 0.9em;
 		min-width: 400px;
 		border-radius: 5px 5px 0 0;
 		overflow: hidden;
-		box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+		box-shadow: 0 0 20px rgb(118, 255, 118);
+
 	}
 	
 	.content-table thead tr{
 		background-color: black;
-		color: #ffffff;
+		color: rgb(118, 255, 118);
 		text-align: left;
 		font-weight: bold;
 	}
 
-	.content-table th,
 	.contect-table td{
 		padding: 10px;
 		border: 1px solid black;
@@ -322,37 +340,43 @@ footer{
 		border-bottom: 1px solid #dddddd;
 	}
 	.content-table tbody tr:nth-of-type(even){
-		background-color: #f3f3f3;
+		background-color: #009879;
 	}
 
 	.content-table tbody tr:last-of-type{
 		border-bottom: 2px solid #009900;
 	}
+
 	.content-table tbody tr:active-row {
 		font-weight: bold;
 		color: #009879;
 	}
 
-	.content-table th::after{
-		content: ' ';
-		width:100px;
-		height:2px;
-		position: absolute;
-		bottom:0;
-		left:0;
-		background:black;
+	.content-table td{
+		overflow: 0;
+		list-style-position:initial;
+		border-color:rgba(189, 14, 212, 0.884);
+	}
+	tbody.Selector tr:hover{
+		transform: scale(1.19);
+		background-image:radial-gradient(circle, #c7ba00 90%,rgba(189, 14, 212, 0.884) 10%);
+    box-shadow: 0px 0px 15px 15px rgba(189, 14, 212, 0.884);
+    transition: box-shadow .25s ease-out;
+    transition background-image: .25s ease-out;
 	}
 </style>
 <body>
-<table class= "content-table" width="90%" cellspacing=50px >
+	<div  class="parallax" ></div>
+	<div style="height:1000px;font-size:36px">
+<table class= "content-table" width="40%" cellspacing=50px ><center> 
 	<thead>
 	<tr>
-		<th><a href="index.html">Product ↕</a></th>
-			<th><a href="index.html">Name ↕</a></th>
-			<th><a href="index.html">Price(before tax) ↕</a></th>
+		<th><center>Product</center></th>
+		<th><center>Name</center></th>
+		<th><center>Price</center></th>
 	</tr>
 </thead>
-<tbody>
+<tbody class="Selector">
 	<tr>
 		<td width="25%"><a href="products/mouse.html">
 			<img src="img/mouseNoBG.png" width="100%"><br>
@@ -558,6 +582,8 @@ footer{
 		</td>
 	</table>
 	</center>
+	</div>
+	<div  class="parallax" ></div>
 	</body>
 	<br>
 
