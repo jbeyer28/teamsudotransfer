@@ -13,9 +13,7 @@
     height:100%;
     font-family: Arial, Helvetica, sans-serif;
 }
-body, html {
-  height: 100%;
-}
+
 
 .parallax {
   /* The image used */
@@ -26,10 +24,9 @@ body, html {
   height: 100%;
 
   /* Create the parallax scrolling effect */
-  background-attachment: fixed;
+  background-attachment:fixed;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }
 
 .Title{
@@ -218,6 +215,16 @@ footer{
 		.Title:hover{
 			overflow: visible;
 		}
+
+div.follow{
+	width:100%;
+	display:block;
+	position:fixed;
+	height: 180px;
+	top:120px;
+
+
+}
 	</style>
     <table width=100%; >
         <tr>
@@ -242,7 +249,7 @@ footer{
 	<div >
 		<tr>
 			<td >
-				<div>
+				<div class = "follow">
 					<ul>
 						<li><a href ="index.html" >All Products</a></li>
 						<li>
@@ -313,7 +320,8 @@ footer{
 <style>
 	.content-table{
 		border-collapse: collapse;
-		margin: 0;
+		margin: 10px;
+		height: 15px;
 		font-size: 0.9em;
 		min-width: 400px;
 		border-radius: 5px 5px 0 0;
