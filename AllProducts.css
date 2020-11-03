@@ -98,6 +98,7 @@ ul{
 }
 
 li a{
+    font-size: 22px;
     display: block;
     color: #4dff4d;
     text-align: center;
@@ -106,6 +107,7 @@ li a{
 }
 
 li p{
+    font-size: 22px;
     display: block;
     color: #4dff4d;
     text-align: center;
