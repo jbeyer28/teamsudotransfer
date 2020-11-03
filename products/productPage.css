@@ -175,12 +175,12 @@ a{
 
 .productDescription p{
     color: rgb(255, 255, 255);
-    size: 15px;
+    font-size: 17px;
     text-shadow: 2px 2px 5px rgb(255, 0, 242);
 }
 
 .productDescription font{
-    size: 15px;
+    size: 17px;
     text-shadow: 2px 2px 5px rgb(78, 74, 66);
 }
 
