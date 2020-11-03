@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <html>
-<title>Sudo Store</title>
+<title>Search - Sudo Store</title>
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
@@ -278,6 +278,9 @@ div.follow{
 		display: none;
 		align:left;
 	}
+	footer a{
+		font-size:medium;
+	}
 </style>
 
 <script>
@@ -427,9 +430,7 @@ function search() {
 	<thead>
 	<tr>
 		<th colspan=3>
-			<form>
-				<input type="text" placeholder="Search" id="searchbar" onkeyup="search()" required>
-			</form>	
+		<input type="text" placeholder="Search" id="searchbar" onkeyup="search()" required>
 		</th>
 	</tr>
 	<tr id="searchHead" height=80px>
@@ -640,7 +641,7 @@ function search() {
 	<!-- Non products from here, <p> tag is hidden but searchable -->
 	
 	<tr class="nonProductLinks">
-		<td width="100%">
+		<td width="100%" colspan=3>
 			<a href="account.html">
 				<center><font size="+2" color="black">Login to account</font></center>
 			</a>
@@ -649,47 +650,47 @@ function search() {
 		
 	</tr>
 	<tr class="nonProductLinks">
-		<td width="100%">
+		<td width="100%" colspan=3>
 			<a href="register.html">
 				<center><font size="+2" color="black">Register new account</font></center>
 			</a>
-			<p>new sign in, create account, new user</p>
+			<p>new sign in, create account, new user, first time</p>
 		</td>
 		
 	</tr>
 	<tr class="nonProductLinks">
 		
-		<td width="100%">
+		<td width="100%" colspan=3>
 			<a href="reset.html">
 				<center><font size="+2" color="black">Reset my password</font></center>
 			</a>
-			<p>forgot password, forgot my passowrd</p>
+			<p>forgot password, forgot my passowrd, what's my password, what is my password</p>
 		</td>
 		
 	</tr>
 	<tr class="nonProductLinks">
 		
-		<td width="100%">
+		<td width="100%" colspan=3>
 			<a href="about/faq.html">
 				<center><font size="+2" color="black">FAQ</font></center>
 			</a>
-			<p>is there tax, what payment types do you accept, do you take, how soon will I see my product, shipping time, credit card, paypal</p>
+			<p>tax, payment, method, do you take, how soon will I see my product, shipping time, credit card, paypal, help</p>
 		</td>
 		
 	</tr>
 	<tr class="nonProductLinks">
 		
-		<td width="100%">
+		<td width="100%" colspan=3>
 			<a href="about/about.html">
 				<center><font size="+2" color="black">About us</font></center>
 			</a>
-			<p>About us, who is this, who are you, person, people, founders</p>
+			<p>about us, who is this, who are you, person, people, founders</p>
 		</td>
 		
 	</tr>
 	<tr class="nonProductLinks">
 		
-		<td width="100%">
+		<td width="100%" colspan=3>
 			<a href="checkout/cart.html">
 				<center><font size="+2" color="black">Go to cart</font></center>
 			</a>
@@ -697,10 +698,10 @@ function search() {
 		</td>
 		
 	</tr>
+	
 </tbody>
 							
 </table>
-
 <script>
 const urlParams = new URLSearchParams(window.location.search);
 document.getElementById("searchbar").value = urlParams.get('q');
@@ -708,24 +709,24 @@ document.getElementById("searchbar").value = urlParams.get('q');
 search();
 </script>
 
-	</center>
-	</div>
-	<div  class="parallax" ></div>
-	</body>
+	
+	
 	<br>
 
-	<footer>
-		<table width="100%" cellspacing="0px">
-	<tr>
-		<td colspan="3">
-			<center>
-				<a href="about/faq.html">FAQ</a>&nbsp;&nbsp;
-				<a href="about/about.html">About</a>&nbsp;&nbsp;
-				<a href="account.html">Account</a><br><br>
-				<font size=3 color="grey">Last updated a while ago</font>
-			</center>
-		</td>
-	</tr>
-</table>
+<footer>
+	<table width="100%" cellspacing="0px">
+		<tr id="footer">
+			<td colspan="3">
+				<center>
+					<a href="about/faq.html">FAQ</a>&nbsp;&nbsp;
+					<a href="about/about.html">About</a>&nbsp;&nbsp;
+					<a href="account.html">Account</a><br>
+					<font size=3 color="grey">Last updated a while ago</font>
+				</center>
+			</td>
+		</tr>
+	</table>
+</center>
 </footer>
+</body>
 </html>
