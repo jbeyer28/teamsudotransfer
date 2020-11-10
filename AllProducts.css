@@ -271,11 +271,12 @@ div.follow{
         * {box-sizing: border-box;}
 
 .img-magnifier-container {
-  position: relative;
+  position: flex;
+overflow: hidden;
 }
 
 .img-magnifier-glass {
-  position: absolute;
+  position: flex;
   border: 3px solid #000;
   border-radius: 50%;
   cursor: none;
