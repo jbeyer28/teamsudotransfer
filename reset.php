@@ -9,6 +9,12 @@ require_once("sql_connect.php");
 	<title>Reset Password - Sudo Store</title>
 	<link rel="stylesheet" href="products/productPage.css">
 	<link rel="stylesheet" href="checkout/cart.css">
+	
+	<style>
+		fieldset{
+			min-width:300px;
+		}
+	</style>
 </head>
 <header>
     <table width=100%; >
@@ -23,8 +29,16 @@ require_once("sql_connect.php");
                 <form action="search.html">
                     <input type="text" placeholder="Search" id="searchbar" name="q" required>
 				</form>		
-				<a href="account.html" class="UsrButton">Login</a>
-				<a href="register.html" class="UsrButton">Register</a>
+				<?php
+				if($current_username != null){
+					echo '<a href="logout.php" class="UsrButton">Logout</a>';
+				
+				}else{
+					echo '<a href="account.html" class="UsrButton">Login</a>
+								<a href="register.html" class="UsrButton">Register</a>';
+				}
+				
+				?>
 				<a href="reset.html" class="UsrButton">Forgot Password?</a>
 				</div>
             </td>

@@ -9,6 +9,13 @@ require_once("sql_connect.php");
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 	<link rel="stylesheet" href="products/productPage.css">
 	<link rel="stylesheet" href="checkout/cart.css">
+	
+	<style>
+		fieldset{
+			min-width:300px;
+		}
+	
+	</style>
 </head>
 <header>
     <table width=100%; >
@@ -23,8 +30,16 @@ require_once("sql_connect.php");
                 <form action="search.html">
                     <input type="text" placeholder="Search" id="searchbar" name="q" required>
 				</form>		
-				<a href="account.html" class="UsrButton">Login</a>
-				<a href="register.html" class="UsrButton">Register</a>
+				<?php
+				if($current_username != null){
+					echo '<a href="logout.php" class="UsrButton">Logout</a>';
+				
+				}else{
+					echo '<a href="account.html" class="UsrButton">Login</a>
+								<a href="register.html" class="UsrButton">Register</a>';
+				}
+				
+				?>
 				<a href="reset.html" class="UsrButton">Forgot Password?</a>
 				</div>
             </td>
@@ -140,6 +155,10 @@ require_once("sql_connect.php");
 										}
 									}
 
+								}else if($current_username != null){
+									echo 'You are already logged in';
+								
+								
 								}else{
 									echo '<form action="" method="post">
 													<input type="email" placeholder="Email" size="30px" name="email" required><br><br><br>
