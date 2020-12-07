@@ -91,12 +91,161 @@ require_once("sql_connect.php");
 						<fieldset>
 							<legend>Reset Password</legend>
 							
-							<?php
-							if($_POST['email'] != ''){
+							<?php 
+							if($_GET['token'] != ''){
+								$date = date('Y-m-d', strtotime(date('Y-m-d'). ' - 3 days'));
+								
+								$sql = "delete from resetlinks where date < '$date';";
+								$stmt = mysqli_stmt_init($dbc);
+								if(!mysqli_stmt_prepare($stmt, $sql)){
+									echo "SQL statement failed 1";
+									exit;
+								}
+								mysqli_stmt_execute($stmt);
+								
+								
+								
+								
+								
+								$sql = 'select * from resetlinks;';
+								$stmt = mysqli_stmt_init($dbc);
+								if(!mysqli_stmt_prepare($stmt, $sql)){
+									echo "SQL statement failed 2";
+									exit;
+								}
+								mysqli_stmt_bind_param($stmt, "s", $_POST['email']);
+								mysqli_stmt_execute($stmt);
+								$response = mysqli_stmt_get_result($stmt);
+								
+								while($row = mysqli_fetch_array($response)){
+									if(password_verify($_GET['token'], $row['linkhash'])){
+										$username = $row['username'];
+										break;
+									}
+									
+								}
+								
+								if($username != null){
+								
+									echo '<form action="reset.php" method="post">
+										
+										<input type="password" placeholder="New Password" size="30px" name="password" required><br><br><br>
+										<input type="hidden" name="token" value="'.$_GET['token'].'">
+										<input type="submit" value="Submit"><br><br>
+										<a href="account.html">Log in</a>
+									</form>';
+								}else{
+									echo 'Invalid link';
+								}
+								
+								
 							
+							}
+							else if($_POST['password'] != '' and $_POST['token'] != ''){
+								$date = date('Y-m-d', strtotime(date('Y-m-d'). ' - 3 days'));
+								
+								$sql = "delete from resetlinks where date < '$date';";
+								$stmt = mysqli_stmt_init($dbc);
+								if(!mysqli_stmt_prepare($stmt, $sql)){
+									echo "SQL statement failed 3";
+									exit;
+								}
+								mysqli_stmt_execute($stmt);
+								
+								
+								$sql = 'select * from resetlinks;';
+								$stmt = mysqli_stmt_init($dbc);
+								if(!mysqli_stmt_prepare($stmt, $sql)){
+									echo "SQL statement failed 4";
+									exit;
+								}
+								mysqli_stmt_bind_param($stmt, "s", $_POST['email']);
+								mysqli_stmt_execute($stmt);
+								$response = mysqli_stmt_get_result($stmt);
+								
+								while($row = mysqli_fetch_array($response)){
+									if(password_verify($_POST['token'], $row['linkhash'])){
+										$username = $row['username'];
+										break;
+									}
+									
+								}
+								
+								
+								if($username != null){
+								
+									$hash_password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+											
+									$sql = "update users set password = ? where username = ?;";
+									$stmt = mysqli_stmt_init($dbc);
+									if(!mysqli_stmt_prepare($stmt, $sql)){
+										echo "SQL statement failed 5";
+										exit;
+									}
+									mysqli_stmt_bind_param($stmt, "ss", $hash_password, $username);
+									mysqli_stmt_execute($stmt);
+									
+									echo 'Your password has been reset!';
+									
+									$sql = "delete from resetlinks where username = ?;";
+									$stmt = mysqli_stmt_init($dbc);
+									if(!mysqli_stmt_prepare($stmt, $sql)){
+										echo "SQL statement failed 3";
+										exit;
+									}
+									mysqli_stmt_bind_param($stmt, "s", $username);
+									mysqli_stmt_execute($stmt);
+								}else{
+									echo 'Something went wrong, please try again';
+								}
+								
 							
-							}else{
-								echo '<form action="">
+							}
+							else if($_POST['email'] != ''){
+								$seed = str_split('abcdefghijklmnopqrstuvwxyz123456789');
+								$key = '';
+								for($i=0;$i<30;$i++){
+									shuffle($seed);
+									$key .= $seed[1];
+								}
+								$key_hash = password_hash($key, PASSWORD_DEFAULT);
+								$date = date("Y-m-d");
+								
+								$sql = 'select * from users where email = ?;';
+								$stmt = mysqli_stmt_init($dbc);
+								if(!mysqli_stmt_prepare($stmt, $sql)){
+									echo "SQL statement failed 6";
+									exit;
+								}
+								mysqli_stmt_bind_param($stmt, "s", $_POST['email']);
+								mysqli_stmt_execute($stmt);
+								$response = mysqli_stmt_get_result($stmt);
+								$row = mysqli_fetch_array($response);
+								$username = $row['username'];
+								
+								if($username != null){
+								
+								
+									$sql = "insert into resetlinks values(null,?,?,?);";
+									$stmt = mysqli_stmt_init($dbc);
+									if(!mysqli_stmt_prepare($stmt, $sql)){
+										echo "SQL statement failed 7";
+										exit;
+									}
+									mysqli_stmt_bind_param($stmt, "sss", $username, $key_hash, $date);
+									mysqli_stmt_execute($stmt);
+								
+								
+								
+									echo 'We can\'t email from this server, so here is your reset link:<br><br>
+										<a href="?token='.$key.'">Reset Link</a>';
+								}else{
+									echo 'Email not found';
+								}
+							
+							}
+							else{
+								echo '<form action="" method="post">
 									
 									<input type="email" placeholder="Email" size="30px" name="email" required><br><br><br>
 									<input type="submit" value="Submit"><br><br>
