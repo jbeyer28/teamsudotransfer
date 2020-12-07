@@ -135,7 +135,8 @@ require_once("sql_connect.php");
 										<a href="account.html">Log in</a>
 									</form>';
 								}else{
-									echo 'Invalid link';
+									echo 'Invalid link
+										<br><br><a href="javascript:history.back();">Back</a>';
 								}
 								
 								
@@ -185,7 +186,8 @@ require_once("sql_connect.php");
 									mysqli_stmt_bind_param($stmt, "ss", $hash_password, $username);
 									mysqli_stmt_execute($stmt);
 									
-									echo 'Your password has been reset!';
+									echo 'Your password has been reset!
+											<br><br><a href="login.php">Login</a>';
 									
 									$sql = "delete from resetlinks where username = ?;";
 									$stmt = mysqli_stmt_init($dbc);
@@ -196,7 +198,8 @@ require_once("sql_connect.php");
 									mysqli_stmt_bind_param($stmt, "s", $username);
 									mysqli_stmt_execute($stmt);
 								}else{
-									echo 'Something went wrong, please try again';
+									echo 'Something went wrong, please try again
+											<br><br><a href="javascript:history.back();">Back</a>';
 								}
 								
 							
@@ -240,7 +243,8 @@ require_once("sql_connect.php");
 									echo 'We can\'t email from this server, so here is your reset link:<br><br>
 										<a href="?token='.$key.'">Reset Link</a>';
 								}else{
-									echo 'Email not found';
+									echo 'Email not found
+										<br><br><a href="javascript:history.back();">Back</a>';
 								}
 							
 							}
