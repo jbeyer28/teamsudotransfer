@@ -337,7 +337,7 @@ function search() {
 <body>
 <header>
     <table width=100%; >
-        <tr>
+        <tr >
             <td >
 				<div class="Title">
 					<h1><a href="index.php">Sudo Store</a></h1>
@@ -345,27 +345,30 @@ function search() {
 				</a>
 				</div>
 				<div class="SearchArea">
-						
-					<?php
-					if($current_username != null){
-						echo '<a href="logout.php" class="UsrButton">Logout</a>
-								<a href="reset.php" class="UsrButton">Change Password</a>';
-						
+                <form action="search.php">
+                    <input type="text" placeholder="Search" id="searchbar" name="q" required>
+				</form>		
+				<?php
+				if($current_username != null){
+					echo '<a href="logout.php" class="UsrButton">Logout</a>
+							<a href="reset.php" class="UsrButton">Change Password</a>';
 					
-					}else{
-						echo '<a href="login.php" class="UsrButton">Login</a>
-									<a href="register.php" class="UsrButton">Register</a>
-									<a href="reset.php" class="UsrButton">Forgot Password?</a>';
-					}
-					
-					?>
-					</div>
-				</td>
-			</tr>
-	<div >
+				
+				}else{
+					echo '<a href="login.php" class="UsrButton">Login</a>
+								<a href="register.php" class="UsrButton">Register</a>
+								<a href="reset.php" class="UsrButton">Forgot Password?</a>';
+				}
+				
+				?>
+				
+				</div>
+            </td>
+		</tr>
+		<div >
 		<tr>
 			<td >
-				<div class = "follow">
+				<div>
 					<ul>
 						<li><a href ="index.php" >Home</a></li>
 						<li><a href="AllProducts.php">All Products</a> </li>
@@ -406,32 +409,11 @@ function search() {
 					</ul>
 				</div>
 			</td>
-			</tr>
+			
 		</tr>
 	</div>
 	</table>
 	<br>
-    <marquee>
-	<table>
-   		<tr>
-     <td>
-            <font size=5>Hey you!</font>
-        </td>
-        <td>
-            <img src="img/LeftRGBAd.png" width="300px" height="100px">
-        </td>
-        <td>
-            <font size=5>Want your rig to <br> look as sick as this?</font>
-        </td>
-        <td>
-            <img src="img/RightRGBAd.png" width="300px" height="100px">
-		</td>
-		<td>
-			<font size = 5> Buy more of our products!!!</font>
-		</td>
-    </tr>
-	</table>
-    </marquee>
 </header>
 
 
