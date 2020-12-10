@@ -21,12 +21,12 @@ require_once("sql_connect.php");
         <tr >
             <td >
 				<div class="Title">
-					<h1><a href="index.html">Sudo Store</a></h1>
+					<h1><a href="index.php">Sudo Store</a></h1>
                     <h7 >"For The Superuser In You!"</h7>
 				</a>
 				</div>
 				<div class="SearchArea">
-                <form action="search.html">
+                <form action="search.php">
                     <input type="text" placeholder="Search" id="searchbar" name="q" required>
 				</form>		
 				<?php
@@ -34,12 +34,12 @@ require_once("sql_connect.php");
 					echo '<a href="logout.php" class="UsrButton">Logout</a>';
 				
 				}else{
-					echo '<a href="account.html" class="UsrButton">Login</a>
-								<a href="register.html" class="UsrButton">Register</a>';
+					echo '<a href="account.php" class="UsrButton">Login</a>
+								<a href="register.php" class="UsrButton">Register</a>';
 				}
 				
 				?>
-				<a href="reset.html" class="UsrButton">Forgot Password?</a>
+				<a href="reset.php" class="UsrButton">Forgot Password?</a>
 				</div>
             </td>
 		</tr>
@@ -48,16 +48,16 @@ require_once("sql_connect.php");
 			<td >
 				<div>
 					<ul>
-						<li><a href ="index.html" >Home</a></li>
-						<li><a href="AllProducts.html">All Products</a> </li>
+						<li><a href ="index.php" >Home</a></li>
+						<li><a href="AllProducts.php">All Products</a> </li>
 						<li>
 						<div class="dropdown">
 							<a href="">Components</a>
 							<div class="dropdown-content">
-								<a href="products/motherboard.html">SUDO Motherboard</a>
-								<a href="products/case.html">SUDO Case</a>
-								<a href="products/ram.html">SUDO RAM</a>
-								<a href="products/cpuFan.html">SUDO CPU Fan</a>
+								<a href="products/motherboard.php">SUDO Motherboard</a>
+								<a href="products/case.php">SUDO Case</a>
+								<a href="products/ram.php">SUDO RAM</a>
+								<a href="products/cpuFan.php">SUDO CPU Fan</a>
 							</div>
 						</div>
 					</li>
@@ -65,10 +65,10 @@ require_once("sql_connect.php");
 						<div class="dropdown">
 							<a href="">Peripherals</a>
 							<div class="dropdown-content">
-								<a href="products/keyboard.html">SUDO Keyboard</a>
-								<a href="products/monitor.html">SUDO Monitor</a>
-								<a href="products/mouse.html">SUDO Mouse</a>
-								<a href="products/speakers.html">SUDO Speakers</a>
+								<a href="products/keyboard.php">SUDO Keyboard</a>
+								<a href="products/monitor.php">SUDO Monitor</a>
+								<a href="products/mouse.php">SUDO Mouse</a>
+								<a href="products/speakers.php">SUDO Speakers</a>
 							</div>
 						</div>
 					</li>
@@ -76,13 +76,13 @@ require_once("sql_connect.php");
 						<div class="dropdown">
 							<a href="">Accessories</a>
 							<div class="dropdown-content">
-								<a href="products/RGBChair.html">SUDO Gaming Chair</a>
-								<a href="products/lightstrip.html">SUDO Lighting Strip</a>
-								<a href="products/mousepad.html">SUDO Mousepad</a>
+								<a href="products/RGBChair.php">SUDO Gaming Chair</a>
+								<a href="products/lightstrip.php">SUDO Lighting Strip</a>
+								<a href="products/mousepad.php">SUDO Mousepad</a>
 							</div>
 						</div>
 					</li>
-						<li><a href="products/laptop.html">Laptops</a></li>
+						<li><a href="products/laptop.php">Laptops</a></li>
 					</ul>
 				</div>
 			</td>
@@ -146,7 +146,7 @@ require_once("sql_connect.php");
 										<input type="password" placeholder="New Password" size="30px" name="password" required><br><br><br>
 										<input type="hidden" name="token" value="'.$_GET['token'].'">
 										<input type="submit" value="Submit"><br><br>
-										<a href="account.html">Log in</a>
+										<a href="account.php">Log in</a>
 									</form>';
 								}else{
 									echo 'Invalid link
@@ -267,7 +267,7 @@ require_once("sql_connect.php");
 									
 									<input type="email" placeholder="Email" size="30px" name="email" required><br><br><br>
 									<input type="submit" value="Submit"><br><br>
-									<a href="account.html">Log in</a>
+									<a href="account.php">Log in</a>
 								</form>';
 							}
 								
@@ -288,9 +288,9 @@ require_once("sql_connect.php");
 	<tr>
 		<td colspan="3">
 			<center>
-				<a href="about/faq.html">FAQ</a>&nbsp;&nbsp;
-				<a href="about/about.html">About</a>&nbsp;&nbsp;
-				<a href="account.html">Account</a><br><br>
+				<a href="about/faq.php">FAQ</a>&nbsp;&nbsp;
+				<a href="about/about.php">About</a>&nbsp;&nbsp;
+				<a href="account.php">Account</a><br><br>
 				<font size=3 color="grey">Last updated a while ago</font>
 			</center>
 		</td>
