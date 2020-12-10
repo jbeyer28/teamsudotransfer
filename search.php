@@ -362,7 +362,6 @@ function search() {
 					</div>
 				</td>
 			</tr>
-	</table>
 	<div >
 		<tr>
 			<td >
