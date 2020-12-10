@@ -1,7 +1,10 @@
+<?php
+require_once('sql_connect.php');
+?>
 <!DOCTYPE html>
 <html lang="en-us">
 <html>
-<title>Sudo Gaming Chair - Sudo Store</title>
+<title>Sudo Mouse - Sudo Store</title>
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
@@ -12,17 +15,17 @@
         <tr >
             <td >
 				<div class="Title">
-					<h1><a href="../index.html">Sudo Store</a></h1>
+					<h1><a href="../index.php">Sudo Store</a></h1>
                     <h7 >"For The Superuser In You!"</h7>
 				</a>
 				</div>
 				<div class="SearchArea">
-                <form action="../search.html">
+                <form action="../search.php">
                     <input type="text" placeholder="Search" id="searchbar" name="q" required>
 				</form>		
-				<a href="../account.html" class="UsrButton">Login</a>
-				<a href="../register.html" class="UsrButton">Register</a>
-				<a href="../reset.html" class="UsrButton">Forgot Password?</a>
+				<a href="../login.php" class="UsrButton">Login</a>
+				<a href="../register.php" class="UsrButton">Register</a>
+				<a href="../reset.php" class="UsrButton">Forgot Password?</a>
 				</div>
             </td>
 		</tr>
@@ -31,16 +34,16 @@
 			<td >
 				<div>
 					<ul>
-						<li><a href ="../index.html" >Home</a></li>
-						<li><a href="../AllProducts.html">All Products</a> </li>
+						<li><a href ="../index.php" >Home</a></li>
+						<li><a href="../AllProducts.php">All Products</a> </li>
 						<li>
 						<div class="dropdown">
 							<a href="">Components</a>
 							<div class="dropdown-content">
-								<a href="../products/motherboard.html">SUDO Motherboard</a>
-								<a href="../products/case.html">SUDO Case</a>
-								<a href="../products/ram.html">SUDO RAM</a>
-								<a href="../products/cpuFan.html">SUDO CPU Fan</a>
+								<a href="../products/motherboard.php">SUDO Motherboard</a>
+								<a href="../products/case.php">SUDO Case</a>
+								<a href="../products/ram.php">SUDO RAM</a>
+								<a href="../products/cpuFan.php">SUDO CPU Fan</a>
 							</div>
 						</div>
 					</li>
@@ -48,10 +51,10 @@
 						<div class="dropdown">
 							<a href="">Peripherals</a>
 							<div class="dropdown-content">
-								<a href="../products/keyboard.html">SUDO Keyboard</a>
-								<a href="../products/monitor.html">SUDO Monitor</a>
-								<a href="../products/mouse.html">SUDO Mouse</a>
-								<a href="../products/speakers.html">SUDO Speakers</a>
+								<a href="../products/keyboard.php">SUDO Keyboard</a>
+								<a href="../products/monitor.php">SUDO Monitor</a>
+								<a href="../products/mouse.php">SUDO Mouse</a>
+								<a href="../products/speakers.php">SUDO Speakers</a>
 							</div>
 						</div>
 					</li>
@@ -59,13 +62,13 @@
 						<div class="dropdown">
 							<a href="">Accessories</a>
 							<div class="dropdown-content">
-								<a href="../products/RGBChair.html">SUDO Gaming Chair</a>
-								<a href="../products/lightstrip.html">SUDO Lighting Strip</a>
-								<a href="../products/mousepad.html">SUDO Mousepad</a>
+								<a href="../products/RGBChair.php">SUDO Gaming Chair</a>
+								<a href="../products/lightstrip.php">SUDO Lighting Strip</a>
+								<a href="../products/mousepad.php">SUDO Mousepad</a>
 							</div>
 						</div>
 					</li>
-						<li><a href="../products/laptop.html">Laptops</a></li>
+						<li><a href="../products/laptop.php">Laptops</a></li>
 					</ul>
 				</div>
 			</td>
@@ -104,29 +107,29 @@
 	<table>
 	<tr>
 		<td>
-			<a href="monitor.html"><img id="sideAd" src="../frontpage Images/MonitorVertAd.png" width="300px" height="1000px"></a>
+			<a href="motherboard.php"><img id="sideAd" src="../frontpage Images/MoboVertAd.png" width="300px" height="1000px"></a>
 		</td>
 		<td colspan="3">
 			<table width="100%" cellpadding="10px" cellspacing="0px">
 				<tr>
 					<td >
-						<img width=500px height=450px src="../img/RGBChairNoBG.png">
+						<img width=500px height=450px src="../img/mouseNoBG.png">
 					</td>
 					<td>
 						<div class="productDescription">
-						<font size=7 id="productName"><b>Sudo Gaming Chair</b></font><br>
-						<p>This epic gaming chair comes with extensive RGB lighting options<br> and includes back support pillows and massage features.</p><br><br>
+						<font size=7 id="productName"><b>Sudo Mouse</b></font><br>
+						<p>Our wired, RGB enabled mouse with adjustable dpi settings between 400 and 1600.<br>Has 16 programmable buttons on each side for epic MMO gameplay!</p><br><br>
 						
-						<p style=" font-size: 20px">$400 <sup>tax not included</sup> </p><br><br>
+						<p style=" font-size: 20px"><del>$80</del> $64 <sup>tax not included</sup> </p><br><br>
 						
-						<button id=CartButton><a href="../checkout/cart.html">Add to cart</a></button>
+						<button id=CartButton><a href="../checkout/cart.php">Add to cart</a></button>
 					</div>
 					</td>
 				</tr>
 			</table>
 		</td>
 		<td>
-			<a href="mouse.html"><img id="sideAd" src="../frontpage Images/MouseVertAd.png" width="300px" height="1000px"></a>
+			<a href="monitor.php"><img id="sideAd" src="../frontpage Images/MonitorVertAd.png" width="300px" height="1000px"></a>
 		</td>
 	</tr>
 	</table>
@@ -138,9 +141,9 @@
 	<tr>
 		<td colspan="3" >
 			<center>
-				<a href="../about/faq.html">FAQ</a>&nbsp;&nbsp;
-				<a href="../about/about.html">About</a>&nbsp;&nbsp;
-				<a href="../account.html">Account</a><br><br>
+				<a href="../about/faq.php">FAQ</a>&nbsp;&nbsp;
+				<a href="../about/about.php">About</a>&nbsp;&nbsp;
+				<a href="../login.php">Account</a><br><br>
 				<font size=3>Last updated a while ago</font>
 			</center>
 		</td>

@@ -31,8 +31,8 @@ require_once('sql_connect.php');
 					echo '<a href="logout.php" class="UsrButton">Logout</a>';
 				
 				}else{
-					echo '<a href="account.html" class="UsrButton">Login</a>
-								<a href="register.html" class="UsrButton">Register</a>';
+					echo '<a href="login.php" class="UsrButton">Login</a>
+								<a href="register.php" class="UsrButton">Register</a>';
 				}
 				
 				?>
