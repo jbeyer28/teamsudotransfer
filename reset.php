@@ -31,15 +31,18 @@ require_once("sql_connect.php");
 				</form>		
 				<?php
 				if($current_username != null){
-					echo '<a href="logout.php" class="UsrButton">Logout</a>';
+					echo '<a href="logout.php" class="UsrButton">Logout</a>
+							<a href="reset.php" class="UsrButton">Change Password</a>';
+					
 				
 				}else{
 					echo '<a href="account.php" class="UsrButton">Login</a>
-								<a href="register.php" class="UsrButton">Register</a>';
+								<a href="register.php" class="UsrButton">Register</a>
+								<a href="reset.php" class="UsrButton">Forgot Password?</a>';
 				}
 				
 				?>
-				<a href="reset.php" class="UsrButton">Forgot Password?</a>
+				
 				</div>
             </td>
 		</tr>
@@ -266,9 +269,12 @@ require_once("sql_connect.php");
 								echo '<form action="" method="post">
 									
 									<input type="email" placeholder="Email" size="30px" name="email" required><br><br><br>
-									<input type="submit" value="Submit"><br><br>
-									<a href="account.php">Log in</a>
-								</form>';
+									<input type="submit" value="Submit"><br><br>';
+									
+								if($current_username != null)
+									echo '<a href="account.php">Log in</a>';
+									
+								echo '</form>';
 							}
 								
 							?>

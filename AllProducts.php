@@ -25,16 +25,18 @@ require_once('sql_connect.php');
 						<input type="text" placeholder="Search" id="searchbar" name="q" required>
 					</form>		
 					<?php
-					if($current_username != null){
-						echo '<a href="logout.php" class="UsrButton">Logout</a>';
+				if($current_username != null){
+					echo '<a href="logout.php" class="UsrButton">Logout</a>
+							<a href="reset.php" class="UsrButton">Change Password</a>';
 					
-					}else{
-						echo '<a href="login.php" class="UsrButton">Login</a>
-									<a href="register.php" class="UsrButton">Register</a>';
-					}
-					
-					?>
-					<a href="reset.php" class="UsrButton">Forgot Password?</a>
+				
+				}else{
+					echo '<a href="account.php" class="UsrButton">Login</a>
+								<a href="register.php" class="UsrButton">Register</a>
+								<a href="reset.php" class="UsrButton">Forgot Password?</a>';
+				}
+				
+				?>
 					</div>
 				</td>
 			</tr>
