@@ -368,8 +368,8 @@ function search() {
 			<td >
 				<div class = "follow">
 					<ul>
-						<li><a href ="../index.php" >Home</a></li>
-						<li><a href="../AllProducts.php">All Products</a> </li>
+						<li><a href ="index.php" >Home</a></li>
+						<li><a href="AllProducts.php">All Products</a> </li>
 						<li>
 						<div class="dropdown">
 							<a href="">Components</a>
