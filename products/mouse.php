@@ -30,7 +30,7 @@ require_once('../sql_connect.php');
 					
 				
 				}else{
-					echo '<a href="../account.php" class="UsrButton">Login</a>
+					echo '<a href="../login.php" class="UsrButton">Login</a>
 								<a href="../register.php" class="UsrButton">Register</a>
 								<a href="../reset.php" class="UsrButton">Forgot Password?</a>';
 				}

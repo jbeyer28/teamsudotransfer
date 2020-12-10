@@ -353,7 +353,7 @@ function search() {
 						
 					
 					}else{
-						echo '<a href="account.php" class="UsrButton">Login</a>
+						echo '<a href="login.php" class="UsrButton">Login</a>
 									<a href="register.php" class="UsrButton">Register</a>
 									<a href="reset.php" class="UsrButton">Forgot Password?</a>';
 					}
@@ -656,7 +656,7 @@ function search() {
 	
 	<tr class="nonProductLinks">
 		<td width="100%" colspan=3>
-			<a href="account.php">
+			<a href="login.php">
 				<center><font size="+2" color="black">Login to account</font></center>
 			</a>
 			<p>user sign in, signin, login, log in</p>
@@ -734,7 +734,7 @@ search();
 				<center>
 					<a href="about/faq.php">FAQ</a>&nbsp;&nbsp;
 					<a href="about/about.php">About</a>&nbsp;&nbsp;
-					<a href="account.php">Account</a><br>
+					<a href="login.php">Account</a><br>
 					<font size=3 color="grey">Last updated a while ago</font>
 				</center>
 			</td>

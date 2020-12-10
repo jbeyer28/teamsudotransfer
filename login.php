@@ -38,7 +38,7 @@ require_once("sql_connect.php");
 					
 				
 				}else{
-					echo '<a href="account.php" class="UsrButton">Login</a>
+					echo '<a href="login.php" class="UsrButton">Login</a>
 								<a href="register.php" class="UsrButton">Register</a>
 								<a href="reset.php" class="UsrButton">Forgot Password?</a>';
 				}
@@ -198,7 +198,7 @@ require_once("sql_connect.php");
 			<center>
 				<a href="about/faq.php">FAQ</a>&nbsp;&nbsp;
 				<a href="about/about.php">About</a>&nbsp;&nbsp;
-				<a href="account.php">Account</a><br><br>
+				<a href="login.php">Account</a><br><br>
 				<font size=3 color="grey">Last updated a while ago</font>
 			</center>
 		</td>

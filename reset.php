@@ -36,7 +36,7 @@ require_once("sql_connect.php");
 					
 				
 				}else{
-					echo '<a href="account.php" class="UsrButton">Login</a>
+					echo '<a href="login.php" class="UsrButton">Login</a>
 								<a href="register.php" class="UsrButton">Register</a>
 								<a href="reset.php" class="UsrButton">Forgot Password?</a>';
 				}
@@ -149,7 +149,7 @@ require_once("sql_connect.php");
 										<input type="password" placeholder="New Password" size="30px" name="password" required><br><br><br>
 										<input type="hidden" name="token" value="'.$_GET['token'].'">
 										<input type="submit" value="Submit"><br><br>
-										<a href="account.php">Log in</a>
+										<a href="login.php">Log in</a>
 									</form>';
 								}else{
 									echo 'Invalid link
@@ -271,8 +271,8 @@ require_once("sql_connect.php");
 									<input type="email" placeholder="Email" size="30px" name="email" required><br><br><br>
 									<input type="submit" value="Submit"><br><br>';
 									
-								if($current_username != null)
-									echo '<a href="account.php">Log in</a>';
+								if($current_username == null)
+									echo '<a href="login.php">Log in</a>';
 									
 								echo '</form>';
 							}
@@ -296,7 +296,7 @@ require_once("sql_connect.php");
 			<center>
 				<a href="about/faq.php">FAQ</a>&nbsp;&nbsp;
 				<a href="about/about.php">About</a>&nbsp;&nbsp;
-				<a href="account.php">Account</a><br><br>
+				<a href="login.php">Account</a><br><br>
 				<font size=3 color="grey">Last updated a while ago</font>
 			</center>
 		</td>
