@@ -346,7 +346,6 @@ function search() {
 				</div>
 				<div class="SearchArea">
                 <form action="search.php">
-                    <input type="text" placeholder="Search" id="searchbar" name="q" required>
 				</form>		
 				<?php
 				if($current_username != null){
