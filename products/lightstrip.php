@@ -1,5 +1,5 @@
 <?php
-require_once('sql_connect.php');
+require_once('../sql_connect.php');
 ?>
 <!DOCTYPE html>
 <html lang="en-us">
