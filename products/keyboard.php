@@ -79,6 +79,7 @@ require_once('../sql_connect.php');
 						</div>
 					</li>
 						<li><a href="../products/laptop.php">Laptops</a></li>
+						<li><a href="../checkout/cart.php" >Cart</a></li>
 					</ul>
 				</div>
 			</td>
@@ -123,7 +124,7 @@ require_once('../sql_connect.php');
 			<table width="100%" cellpadding="10px" cellspacing="0px">
 				<tr>
 					<td >
-						<img width=500px height=450px src="../img/KeyboardNoBG.png">
+						<img width=500px height=450px src="../img/keyboardNoBG.png">
 					</td>
 					<td>
 						<div class="productDescription">

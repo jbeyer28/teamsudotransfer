@@ -403,6 +403,7 @@ function search() {
 						</div>
 					</li>
 						<li><a href="products/laptop.php">Laptops</a></li>
+						<li><a href="checkout/cart.php" >Cart</a></li>
 					</ul>
 				</div>
 			</td>
